@@ -8,6 +8,15 @@ public class Endereco {
     private String estado;
     private String pais;
 
+    public Endereco(String rua, int numero, String bairro, String cidade, String estado, String pais) {
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.pais = pais;
+    }
+
     public String getRua() {
         return rua;
     }
@@ -30,5 +39,17 @@ public class Endereco {
 
     public String getPais() {
         return pais;
+    }
+
+    @Override
+    public String toString() {
+        return "{Endereco: " +
+                "rua='" + rua +
+                ", numero=" + numero +
+                ", bairro='" + bairro +
+                ", cidade='" + cidade +
+                ", estado='" + estado +
+                ", pais='" + pais +
+                '}';
     }
 }

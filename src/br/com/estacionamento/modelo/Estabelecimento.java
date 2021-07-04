@@ -12,6 +12,16 @@ public class Estabelecimento {
     private Endereco endereco;
     private Veiculo veiculo;
 
+    public Estabelecimento(String nome, String CNPJ, String telefone, int qntVagasMotos, int qntVagasCarros, Endereco endereco, Veiculo veiculo) {
+        this.nome = nome;
+        this.CNPJ = CNPJ;
+        this.telefone = telefone;
+        this.qntVagasMotos = qntVagasMotos;
+        this.qntVagasCarros = qntVagasCarros;
+        this.endereco = endereco;
+        this.veiculo = veiculo;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -68,6 +78,16 @@ public class Estabelecimento {
         this.veiculo = veiculo;
     }
 
-    // como conectar as classes endereco e veiculo,
-    // com a classe estabelecimento?
+    @Override
+    public String toString() {
+        return "{Estabelecimento: " +
+                "nome='" + nome +
+                ", CNPJ='" + CNPJ +
+                ", telefone='" + telefone +
+                ", qntVagasMotos=" + qntVagasMotos +
+                ", qntVagasCarros=" + qntVagasCarros +
+                ", endereco=" + endereco +
+                ", veiculo=" + veiculo +
+                '}';
+    }
 }
